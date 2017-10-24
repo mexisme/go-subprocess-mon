@@ -1,7 +1,7 @@
 package subprocess_test
 
 import (
-	. "bitbucket.org/mexisme/get-secrets/exec"
+	. "github.com/mexisme/go-subprocess-mon/subprocess"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

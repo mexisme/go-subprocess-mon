@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestExec(t *testing.T) {
+func TestSubprocess(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Subprocess Suite")
 }
