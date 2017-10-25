@@ -6,7 +6,6 @@ import (
 	"github.com/mexisme/go-subprocess-mon/subprocess"
 
 	"github.com/mexisme/go-config"
-	//"github.com/hashicorp/go-multierror"
 	log "github.com/sirupsen/logrus"
 )
 
