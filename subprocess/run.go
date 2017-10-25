@@ -17,7 +17,7 @@ Run runs the provided "command".
 It combines the given os.Environ (copy) and .env KV maps into a
 new os.Environ []string and passes these into the exec.Command() function.
 */
-func (s *Details) Run() error {
+func (s *Subprocess) Run() error {
 	stderrChan := make(chan string, 1000)
 	defer closeChanIfNotClosed(stderrChan)
 

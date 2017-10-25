@@ -5,45 +5,37 @@ type watchLog struct {
 	memory bool
 }
 
-// Details is simply the struct method-wrapper for the "exec" package
-type Details struct {
+// Subprocess is simply the struct method-wrapper for the "exec" package
+type Subprocess struct {
 	env      []string
 	command  []string
 	watchLog watchLog
 }
 
-// New creates a new exec.Details struct
-func New() *Details {
-	new := &Details{}
+// New creates a new exec.Subprocess struct
+func New() *Subprocess {
+	new := &Subprocess{}
 	new.watchLog = watchLog{cpu: false, memory: false}
 
 	return new
 }
 
-// WithEnviron creates a new exec.Details struct with the os.Environ object copied-in
-func (s *Details) WithEnviron(env []string) *Details {
-	clone := *s // This does a shallow clone
-
-	clone.env = env
-
-	return &clone
+// WithEnviron creates a new subprocess.Subprocess struct with the os.Environ object copied-in
+func (s *Subprocess) SetEnviron(env []string) *Subprocess {
+	s.env = env
+	return s
 }
 
-// WithCommand creates a new exec.Details struct with the command []string copied-in
-func (s *Details) WithCommand(command []string) *Details {
-	clone := *s // This does a shallow clone
-
-	clone.command = command
-
-	return &clone
+// WithCommand creates a new subprocess.Subprocess struct with the command []string copied-in
+func (s *Subprocess) SetCommand(command []string) *Subprocess {
+	s.command = command
+	return s
 }
 
-// WithWatchLog creates a new exec.Details struct with CPU or Memory watch loggers enabled
-func (s *Details) WithWatchLog(cpu, memory bool) *Details {
-	clone := *s // This does a shallow clone
+// WithWatchLog creates a new subprocess.Subprocess struct with CPU or Memory watch loggers enabled
+func (s *Subprocess) SetWatchLog(cpu, memory bool) *Subprocess {
+	s.watchLog.cpu = cpu
+	s.watchLog.memory = memory
 
-	clone.watchLog.cpu = cpu
-	clone.watchLog.memory = memory
-
-	return &clone
+	return s
 }
