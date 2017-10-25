@@ -8,17 +8,17 @@ import (
 )
 
 var _ = Describe("subprocess.run", func() {
-	var command *Details
+	var command *Subprocess
 
 	BeforeEach(func() {
 		command = New()
 	})
 
 	It("running 'true' succeeds", func() {
-		Expect(command.WithCommand([]string{"true"}).Run()).NotTo(HaveOccurred())
+		Expect(command.SetCommand([]string{"true"}).Run()).NotTo(HaveOccurred())
 	})
 
 	It("running 'false' fails", func() {
-		Expect(command.WithCommand([]string{"false"}).Run()).To(HaveOccurred())
+		Expect(command.SetCommand([]string{"false"}).Run()).To(HaveOccurred())
 	})
 })
