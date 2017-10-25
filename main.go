@@ -12,7 +12,7 @@ import (
 
 func main() {
 	config.Init(config.Config{
-		File:       "subprocess",
+		File:       ".subprocess",
 		EnvPrefix:  "subprocess",
 		Name:       version.Application(),
 		Release:    version.Release(),
