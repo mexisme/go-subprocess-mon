@@ -2,7 +2,7 @@ package version
 
 const (
 	application = "subprocess-monitor"
-	release     = "0.1.2"
+	release     = "0.2.0"
 )
 
 // Application is the "friendly" name for this code
