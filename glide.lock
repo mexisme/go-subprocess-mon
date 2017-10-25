@@ -1,5 +1,5 @@
 hash: e2ebf093913ffb40505e83e4e7708e84062c81bc5888ad07a74390502b27e2e7
-updated: 2017-10-25T17:07:22.445256+13:00
+updated: 2017-10-26T00:30:31.641691+13:00
 imports:
 - name: github.com/certifi/gocertifi
   version: 3fd9e1adb12b72d2f3f82191d49be9b93c69f67c
@@ -23,7 +23,7 @@ imports:
 - name: github.com/magiconair/properties
   version: be5ece7dd465ab0765a9682137865547526d1dfb
 - name: github.com/mexisme/go-config
-  version: 17a89e0592dd196a8915ea732d6aa86abaad7994
+  version: 6388080c57d0abff493e27ba6ad6da160c349a99
   subpackages:
   - logging
   - settings
