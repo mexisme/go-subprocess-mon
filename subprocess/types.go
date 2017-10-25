@@ -20,19 +20,19 @@ func New() *Subprocess {
 	return new
 }
 
-// WithEnviron creates a new subprocess.Subprocess struct with the os.Environ object copied-in
+// SetEnviron creates a new subprocess.Subprocess struct with the os.Environ object copied-in
 func (s *Subprocess) SetEnviron(env []string) *Subprocess {
 	s.env = env
 	return s
 }
 
-// WithCommand creates a new subprocess.Subprocess struct with the command []string copied-in
+// SetCommand creates a new subprocess.Subprocess struct with the command []string copied-in
 func (s *Subprocess) SetCommand(command []string) *Subprocess {
 	s.command = command
 	return s
 }
 
-// WithWatchLog creates a new subprocess.Subprocess struct with CPU or Memory watch loggers enabled
+// SetWatchLog creates a new subprocess.Subprocess struct with CPU or Memory watch loggers enabled
 func (s *Subprocess) SetWatchLog(cpu, memory bool) *Subprocess {
 	s.watchLog.cpu = cpu
 	s.watchLog.memory = memory
