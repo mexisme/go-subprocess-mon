@@ -3,3 +3,6 @@ language: go
 go:
   - 1.9
   - tip
+
+script:
+  - make clean test-default all
