@@ -1,10 +1,13 @@
 package: github.com/mexisme/go-subprocess-mon
-subpackages: subprocess
 import:
+- package: github.com/mexisme/go-config
+  version: ^0.1.0
 - package: github.com/sirupsen/logrus
   version: ^1.0
-- package: github.com/shirou/gopsutil/process
+- package: github.com/shirou/gopsutil
   version: ^2.17
+  subpackages:
+  - process
 testImport:
 - package: github.com/onsi/ginkgo
   version: ^1.3
